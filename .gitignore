@@ -1,0 +1,54 @@
+# sistema
+.DS_Store
+Thumbs.db
+
+# node / dependências
+node_modules/
+
+# build / caches
+dist/
+.build/
+.vite/
+.cache/
+.parcel-cache/
+.next/
+.out/
+.svelte-kit/
+
+# TypeScript
+*.tsbuildinfo
+
+# env / credenciais (mantém .env.example)
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# logs / coverage
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+*.log
+logs/
+coverage/
+.nyc_output/
+
+# IDEs / editores
+.vscode/
+.idea/
+.history/
+
+# testes / ferramentas
+.vitest/
+test-results/
+
+# chaves / certificados
+*.pem
+*.key
+*.crt
+*.p12
+
+# arquivos temporários
+*.tmp
+*.temp
+*.swp
