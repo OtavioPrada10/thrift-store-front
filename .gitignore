@@ -1,54 +1,35 @@
-# sistema
+# Dependências
+node_modules/
+
+# Build
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.vscode/
+
+# Sistema
 .DS_Store
 Thumbs.db
 
-# node / dependências
-node_modules/
-
-# build / caches
-dist/
-.build/
-.vite/
-.cache/
-.parcel-cache/
-.next/
-.out/
-.svelte-kit/
-
-# TypeScript
-*.tsbuildinfo
-
-# env / credenciais (mantém .env.example)
+# Configuração local
 .env
 .env.local
-.env.*.local
-!.env.example
+.env.development.local
+.env.test.local
+.env.production.local
 
-# logs / coverage
-npm-debug.log*
-yarn-debug.log*
-pnpm-debug.log*
-*.log
-logs/
-coverage/
-.nyc_output/
-
-# IDEs / editores
-.vscode/
+# Editor e cache
 .idea/
-.history/
-
-# testes / ferramentas
-.vitest/
-test-results/
-
-# chaves / certificados
-*.pem
-*.key
-*.crt
-*.p12
-
-# arquivos temporários
-*.tmp
-*.temp
 *.swp
+*.swo
+*.tmp
+*.bak
+
+# Tipos de cache e lint
+.eslintcache
+.cache/
