@@ -1,21 +1,19 @@
 THRIFT STORE
 
-*
-npm install -D tailwindcss@3 postcss autoprefixer
-npm install react-router-dom
-*
+* npm install -D tailwindcss@3 postcss autoprefixer
+  npm install react-router-dom
 
 # ambiente
-React + vite
+* React + vite
 
 # rotas
-React Rounter v6
+* React Rounter v6
 
 # script
-Typescript
+* Typescript
 
 # css
-Tailwind
+* Tailwind
 
 # cache
-React Query (TanStack Query)
+* React Query (TanStack Query)   
