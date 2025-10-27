@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 
 const Home = lazy(() => import("../pages/Home"));
 const Products = lazy(() => import("../pages/Products"));
+const NotFound404 = lazy(() => import("../pages/NotFound404"));
 
 export default function AppRouter() {
   return (
@@ -10,6 +11,7 @@ export default function AppRouter() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Products" element={<Products />} />        
+        <Route path="*" element={<NotFound404 />} />        
       </Routes>
     </Suspense>
   );

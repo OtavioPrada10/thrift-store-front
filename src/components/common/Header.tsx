@@ -2,14 +2,15 @@ import React from 'react'
 import lupa from '../../assets/lupa.png'
 import user from '../../assets/user.png'
 import cart from '../../assets/cart.png'
+import NoAccount from '../common/NoAccount'
 
 export default function Header(): JSX.Element {
   return (
     <header className="bg-blue-200">
-      <div className='bg-black text-white text-sm flex items-center justify-center p-1'>
-          <div className="w-5 h-5 rounded-full bg-white flex items-center justify-center shadow-sm text-black mr-1">TS</div>
-          <p>Crie uma conta para melhorar a sua experiência</p> 
-      </div>
+
+      {/* se usuario não tiver Logado, então */}
+      <NoAccount />
+
       <div className="max-w-7xl mx-auto px-4 py-2">
         <div className="flex items-center h-14 relative">
           <nav className="flex items-center gap-6 text-xl">
