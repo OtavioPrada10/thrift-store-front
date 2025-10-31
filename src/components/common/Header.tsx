@@ -1,16 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 import lupa from '../../assets/lupa.png'
 import user from '../../assets/user.png'
 import cart from '../../assets/cart.png'
 import NoAccount from '../common/NoAccount'
+import LoginForm from '../common/Login' 
 
 export default function Header(): JSX.Element {
+  const [showLoginForm, setShowLoginForm] = useState(false)
+  const [showNoAccount, setShowNoAccount] = useState(true)
+
+  const handleLoginSuccess = () => {
+    setShowLoginForm(false)
+    setShowNoAccount(false)  
+  }
+
   return (
     <header className="bg-blue-200">
+ 
+      {showNoAccount && (
+        <NoAccount 
+          onClick={() => setShowLoginForm(true)}
+          onClose={() => setShowNoAccount(false)}
+        />
+      )}
 
-      {/* se usuario não tiver Logado, então */}
-      <NoAccount />
+      {showLoginForm && (
+        <LoginForm 
+          onClose={() => setShowLoginForm(false)}
+          onLoginSuccess={handleLoginSuccess}
+        />
+      )}
 
+ 
       <div className="max-w-7xl mx-auto px-4 py-2">
         <div className="flex items-center h-14 relative">
           <nav className="flex items-center gap-6 text-xl">
@@ -25,7 +46,11 @@ export default function Header(): JSX.Element {
             <button aria-label="search" className="p-2">
               <img src={lupa} alt="Search" className="w-6 h-6 hover:scale-110 transition-transform duration-200" />
             </button>
-            <button aria-label="account" className="p-2">
+            <button 
+              aria-label="account" 
+              className="p-2"
+              onClick={() => setShowLoginForm(true)}
+            >
               <img src={user} alt="Account" className="w-6 h-6 hover:scale-110 transition-transform duration-200" />
             </button>
             <button aria-label="cart" className="p-2">
@@ -37,7 +62,7 @@ export default function Header(): JSX.Element {
       <div className="border-t border-gray-200 bg-white p-4">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center justify-center h-12">
-            <nav className="flex gap-8 text  relative bottom-2 font-semibold">
+            <nav className="flex gap-8 text relative bottom-2 font-semibold">
               <a className="hover:text-blue-600 hover:underline cursor-pointer">Camisetas</a>
               <a className="hover:text-blue-600 hover:underline cursor-pointer">Calças</a>
               <a className="hover:text-blue-600 hover:underline cursor-pointer">Saias</a>

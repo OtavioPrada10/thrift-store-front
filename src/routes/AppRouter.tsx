@@ -5,6 +5,7 @@ const Home = lazy(() => import("../pages/Home"));
 const Products = lazy(() => import("../pages/Products"));
 const NotFound404 = lazy(() => import("../pages/NotFound404"));
 const Register = lazy(() => import("../pages/Register"));
+const AdminInicio = lazy(() => import("../admin/Inicio"));
 
 export default function AppRouter() {
   return (
@@ -13,6 +14,7 @@ export default function AppRouter() {
         <Route path="/" element={<Home />} />
         <Route path="/Products" element={<Products />} />
         <Route path="/Register" element={<Register />} />
+        <Route path="/Admin/Inicio" element={<AdminInicio />} />
         <Route path="*" element={<NotFound404 />} />        
       </Routes>
     </Suspense>
